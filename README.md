@@ -1,3 +1,3 @@
 # settings
 
-backup of bash_profile and bash_rc files
+backup of bash_profile and bashrc files
