@@ -7,12 +7,11 @@
 alias ls="ls -G"
 
 alias h='history'
-alias qa='cd /qa/func/Automation/'
-alias comp='cd /qa/func/Composite/'
 alias log='cd /var/log'
 
+#alias qa='cd /qa/func/Automation/'
+#alias comp='cd /qa/func/Composite/'
 
-alias p4work="cd /p4work/p4-wdpro/Projects/NGE/Sites/pep/main"
 
 #------
 # Paths

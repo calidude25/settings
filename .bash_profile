@@ -1,4 +1,4 @@
-#new stuff 7.17.19
+#new stuff 12.2.20
 
 export PATH=$PATH:/home/user/bin
 export PATH=~/.local/bin:$PATH
@@ -82,8 +82,20 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 export PS1='\[\e[1;32m\]\u\[\e[0;39m\]@\[\e[1;36m\]\h\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0;39m\] \[\e[0;39m\]\n$ '
 
+
+__git_ps1 () 
+{ 
+    local b="$(git symbolic-ref HEAD 2>/dev/null)";
+    if [ -n "$b" ]; then
+        printf " (%s)" "${b##refs/heads/}";
+    fi
+}
+
+PS1="\h\$(__git_ps1)$ "
+
 #########################
 #enables color for iTerm
+
 export TERM=xterm-color
 
 ############
